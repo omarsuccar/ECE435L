@@ -1,0 +1,374 @@
+{
+	"info": {
+		"_postman_id": "4c18aa00-bca3-48f2-b286-aee137625158",
+		"name": "flask user app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39774414"
+	},
+	"item": [
+		{
+			"name": "Get User list",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"bilal Succar\",\n    \"email\": \"bilalsuccar@gmail.com\",\n    \"phone\": \"123-456-7890\",\n    \"address\": \"beirut\",\n    \"country\": \"Lebanon\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/users",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get specific user",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/users/3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users",
+								"3"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.13.0"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 15 Nov 2024 19:39:50 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "149"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"address\": \"Ottawa\",\n    \"country\": \"Canada\",\n    \"email\": \"john.cena@gmail.com\",\n    \"name\": \"John cena\",\n    \"phone\": \"987-654-3210\",\n    \"user_id\": 3\n}"
+				},
+				{
+					"name": "get all users",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"bilal Succar\",\n    \"email\": \"bilalsuccar@gmail.com\",\n    \"phone\": \"123-456-7890\",\n    \"address\": \"beirut\",\n    \"country\": \"Lebanon\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/users",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.13.0"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 15 Nov 2024 19:40:17 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "503"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"address\": \"Ottawa\",\n        \"country\": \"Canada\",\n        \"email\": \"john.cena@gmail.com\",\n        \"name\": \"John cena\",\n        \"phone\": \"987-654-3210\",\n        \"user_id\": 3\n    },\n    {\n        \"address\": \"beirut\",\n        \"country\": \"Lebanon\",\n        \"email\": \"bilalsuccar@gmail.com\",\n        \"name\": \"bilal Succar\",\n        \"phone\": \"123-456-7890\",\n        \"user_id\": 4\n    },\n    {\n        \"address\": \"beirut\",\n        \"country\": \"leb\",\n        \"email\": \"omar@example.com\",\n        \"name\": \"Omar Succar\",\n        \"phone\": \"987-654-3210\",\n        \"user_id\": 5\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\": 2,\n    \"name\": \"Bob khansa\",\n    \"email\": \"bob@example.com\",\n    \"phone\": \"987-654-3210\",\n    \"address\": \"456 Oak Avenue\",\n    \"country\": \"USA\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/users/update",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"update"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_id\": 2,\n    \"name\": \"Bob khansa\",\n    \"email\": \"bob@example.com\",\n    \"phone\": \"987-654-3210\",\n    \"address\": \"456 Oak Avenue\",\n    \"country\": \"USA\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/users/update",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users",
+								"update"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.13.0"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 15 Nov 2024 19:23:29 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "151"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"address\": \"456 Oak Avenue\",\n    \"country\": \"USA\",\n    \"email\": \"bob@example.com\",\n    \"name\": \"Bob khansa\",\n    \"phone\": \"987-654-3210\",\n    \"user_id\": 2\n}"
+				}
+			]
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\": 5,\n    \"name\": \"Omar Succar\",\n    \"email\": \"omar@example.com\",\n    \"phone\": \"987-654-3210\",\n    \"address\": \"beirut\",\n    \"country\": \"leb\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/users/add",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"add"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_id\": 5,\n    \"name\": \"Omar Succar\",\n    \"email\": \"omar@example.com\",\n    \"phone\": \"987-654-3210\",\n    \"address\": \"beirut\",\n    \"country\": \"leb\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/users/add",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users",
+								"add"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.13.0"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 15 Nov 2024 19:28:27 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "145"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"address\": \"beirut\",\n    \"country\": \"leb\",\n    \"email\": \"omar@example.com\",\n    \"name\": \"Omar Succar\",\n    \"phone\": \"987-654-3210\",\n    \"user_id\": 5\n}"
+				}
+			]
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/users/delete/2",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"delete",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
